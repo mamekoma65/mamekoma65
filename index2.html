@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>まめこまの日常 🐾</title>
+    <style>
+        /* --- 全体のデザイン --- */
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+            background-color: #fffaf0;
+            color: #5d4037;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffb74d;
+            font-size: 1.8em;
+            border-bottom: 2px dashed #ffb74d;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #81c784;
+            border-left: 6px solid #81c784;
+            padding-left: 12px;
+            margin-top: 40px;
+            font-size: 1.4em;
+        }
+
+        /* --- ふたりの紹介 --- */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .profile-card {
+            background: #fdf5e6;
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid #faedcd;
+        }
+
+        .profile-card h3 {
+            margin-top: 0;
+            color: #ef6c00;
+            text-align: center;
+            border-bottom: 1px solid #ffe0b2;
+            padding-bottom: 5px;
+        }
+
+        /* --- 兄妹の相関図エリア --- */
+        .relation-box {
+            background: #fff9f0;
+            border: 2px solid #ffe0b2;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .relation-box::before {
+            content: '🏠 ふたりの関係';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffb74d;
+            color: white;
+            padding: 2px 15px;
+            border-radius: 50px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+
+        .relation-flex {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .relation-text {
+            font-size: 0.9em;
+            color: #ef6c00;
+            font-weight: bold;
+        }
+
+        /* --- 写真館エリア --- */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .photo-box {
+            background: #f0f0f0;
+            border-radius: 15px;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #eee;
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-wide {
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            background: #f9f9f9;
+        }
+
+        .photo-wide img {
+            width: 100%;
+            display: block;
+        }
+
+        /* --- 占い --- */
+        .fortune-area {
+            text-align: center;
+            background: #e3f2fd;
+            padding: 30px 20px;
+            border-radius: 25px;
+            margin-top: 40px;
+        }
+
+        .btn-fortune {
+            background: #4fc3f7;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            box-shadow: 0 4px 0 #29b6f6;
+            transition: 0.2s;
+        }
+
+        .btn-fortune:active {
+            transform: translateY(3px);
+            box-shadow: none;
+        }
+
+        /* --- SNSリンク --- */
+        .sns-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #fffcf9 0%, #f7e8df 100%);
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        .insta-btn {
+            display: inline-block;
+            padding: 16px 50px;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(204, 35, 102, 0.3);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🐾 まめこまの日常 🐾</h1>
+
+    <div class="profile-grid">
+        <div class="profile-card">
+            <h3>まめ (♂)</h3>
+            <p>🎾 <strong>好きな遊び：</strong> ペットボトル</p>
+            <p>🦴 <strong>好きなおやつ：</strong> ボーロ</p>
+            <p>💤 <strong>よく寝る場所：</strong> 窓辺</p>
+        </div>
+        <div class="profile-card">
+            <h3>こま (♀)</h3>
+            <p>🎾 <strong>好きな遊び：</strong> ボール、タオル</p>
+            <p>🦴 <strong>好きなおやつ：</strong> お肉系</p>
+            <p>💤 <strong>よく寝る場所：</strong> ソファー</p>
+        </div>
+    </div>
+
+    <div class="relation-box">
+        <div class="relation-flex">
+            <div>
+                <span style="font-size: 1.2em;">まめ</span><br>
+                <span class="relation-text">世話が焼ける妹</span>
+            </div>
+            <div style="font-size: 1.5em; color: #ffb74d;">⇄</div>
+            <div>
+                <span style="font-size: 1.2em;">こま</span><br>
+                <span class="relation-text">お兄ちゃん大好き</span>
+            </div>
+        </div>
+    </div>
+
+    <h2>まめこま写真館</h2>
+    <div class="photo-grid">
+        <div class="photo-box">
+            <img src="C:\Users\shunp\OneDrive\デスクトップ\遊び場\ご機嫌なまめ.png" alt="ご機嫌なまめ">
+        </div>
+        <div class="photo-box">
+            <img src="C:\Users\shunp\OneDrive\デスクトップ\遊び場\コマお迎えの日.png" alt="コマお迎えの日">
+        </div>
+    </div>
+
+    <h2>なかよし兄妹の一コマ</h2>
+    <div class="photo-wide">
+        <img src="C:\Users\shunp\OneDrive\デスクトップ\遊び場\ベンチでお座り.png" alt="ベンチでお座り">
+        <p style="text-align: center; font-size: 0.8em; color: #8d6e63; margin: 10px 0;">お外のベンチで仲良くお座り！</p>
+    </div>
+
+    <div class="photo-wide">
+        <img src="C:\Users\shunp\OneDrive\デスクトップ\遊び場\ふたりでかみかみ中.png" alt="ふたりでかみかみ中">
+        <p style="text-align: center; font-size: 0.8em; color: #8d6e63; margin: 10px 0;">時には激しく（？）服をカミカミ…</p>
+    </div>
+
+    <div class="fortune-area">
+        <h2>まめこま占い</h2>
+        <div id="fortune-result" style="margin: 20px 0; font-weight: bold; font-size: 1.2em; color: #1565c0;">ボタンを押して占ってみてね！</div>
+        <button class="btn-fortune" onclick="drawFortune()">占いをひく！</button>
+    </div>
+
+    <div class="sns-section">
+        <p style="margin-top: 0; font-size: 0.9em; color: #8d6e63; margin-bottom: 20px;">もっと見たい方はインスタへどうぞ！</p>
+        <a href="https://www.instagram.com/mame.nico.68/" class="insta-btn" target="_blank">
+            インスタはこちら！
+        </a>
+    </div>
+</div>
+
+<script>
+    function drawFortune() {
+        const results = [
+            "大吉：まめお兄ちゃんにスリスリされる最高の日！",
+            "吉：こま妹と一緒に全力ダッシュで遊ぼう！",
+            "中吉：窓辺でふたりとお昼寝してのんびり",
+            "小吉：こまがお肉を少しわけてくれるかも？",
+            "まめ吉：空のペットボトルが幸運を運ぶよ！",
+            "こま吉：お気に入りのタオルで運気アップ！",
+            "はなまる：まめこまに囲まれて癒やされる予感"
+        ];
+        const randomIndex = Math.floor(Math.random() * results.length);
+        document.getElementById('fortune-result').innerText = results[randomIndex];
+    }
+</script>
+
+</body>
+</html>
